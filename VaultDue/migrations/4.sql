@@ -1,0 +1,11 @@
+
+CREATE TABLE whatsapp_otp_verifications (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  user_id TEXT NOT NULL,
+  phone_number TEXT NOT NULL,
+  otp_code TEXT NOT NULL,
+  expires_at DATETIME NOT NULL,
+  is_verified BOOLEAN DEFAULT 0,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
